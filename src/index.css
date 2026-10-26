@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-disaply: "Urbanist", sans-serif;
+  --breakpoint-3xl: 1920px;
+  /* Updated to DEVRO's electric cyan/blue as the primary color */
+  --color-primary: #00D2FF;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-disaply);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  /* custom scrollbar */
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #05050a;
+    /* Darker navy/black to fit the background */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    /* Gradient matching the mascot's cyber magenta-to-blue-to-cyan glow */
+    background: linear-gradient(180deg, #D4145A, #9B30FF, #00D2FF);
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb-hover {
+    /* Brighter glow gradient for the hover state */
+    background: linear-gradient(180deg, #FF2E93, #B85BFF, #00F0FF);
+  }
+
+  /* firefox scrollbar */
+
+  html {
+    scrollbar-width: thin;
+    /* Uses the cyan and dark background for Firefox */
+    scrollbar-color: #00D2FF #05050a;
+  }
+
+  /* hide scrollbar for carousel */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* animation keyframe */
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes pulse {
+
+    0%,
+    100% {
+      opacity: 0.3;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  /* utility classes */
+
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  .animate-pulse {
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* line clamp */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
