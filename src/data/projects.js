@@ -32,7 +32,7 @@ export const projects = [
       "A responsive luxury watch e-commerce storefront built with HTML5 and CSS3. Features a modern navigation bar, multi-column product grid, styled pricing cards, interactive wishlist icons, and clean call-to-action buttons.",
     image: "/images/projects/project2.png",
     category: "UI Components",
-    technologies: ["React", "TypeScript", "Storybook", "CSS Modules"],
+    technologies: ["HTML", "CSS"],
     metrics: "1+ active users",
     demoUrl: "",
     githubUrl: "https://github.com/DEVRO99/website_div",
@@ -44,7 +44,7 @@ export const projects = [
       "Responsive e-commerce hero banner and carousel slider designed with modern CSS animations, bold typography, and interactive shopping",
     image: "/images/projects/project3.png",
     category: "Web Apps",
-    technologies: ["Next.js", "Chart.js", "PostgreSQL", "Redis"],
+    technologies: ["HTML","CSS"],
     metrics: "10+ active users",
     demoUrl: "",
     githubUrl: "https://github.com/DEVRO99/module1_project",
@@ -68,7 +68,7 @@ export const projects = [
       "Modern, customizable portfolio template for developers and designers with dark mode and smooth animations.",
     image: "/images/projects/project4.png",
     category: "UI Components",
-    technologies: ["React", "Framer Motion", "Tailwind", "Vite"],
+    technologies: ["React", "Tailwind"],
     metrics: "1+ GitHub stars",
     demoUrl: "",
     githubUrl: "https://github.com/DEVRO99/portfolio-",
@@ -76,3 +76,5 @@ export const projects = [
 ];
 
 export const categories = ["All", "Web Apps", "UI Components", "Full Stack"];
+
+
