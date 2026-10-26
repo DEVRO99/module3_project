@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Mail, MapPin, Send, Loader2 } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaViber } from "react-icons/fa";
 import FadeIn from "../animations/FadeIn";
 
 const Contact = () => {
@@ -228,16 +228,37 @@ const Contact = () => {
                 <div className="text-xs text-white/50 mb-3">
                   Connect with me
                 </div>
-                <div className="flex items-center gap-3">
-                  <a
-                    href="https://github.com/DEVRO99"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-xl bg-[#0b0d10]/90 border border-white/10 hover:border-primary/40 text-white/70 hover:text-primary flex items-center justify-center transition-all backdrop-blur-sm"
-                    aria-label="GitHub Profile"
-                  >
-                    <FaGithub className="w-5 h-5" />
-                  </a>
+                <div className="flex items-start gap-4">
+                  {/* GitHub */}
+                  <div className="flex flex-col items-center gap-1.5">
+                    <a
+                      href="https://github.com/DEVRO99"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 rounded-xl bg-[#0b0d10]/90 border border-white/10 hover:border-primary/40 text-white/70 hover:text-primary flex items-center justify-center transition-all backdrop-blur-sm"
+                      aria-label="GitHub Profile"
+                    >
+                      <FaGithub className="w-5 h-5" />
+                    </a>
+                    <span className="text-[11px] text-white/40">GitHub</span>
+                  </div>
+
+                  {/* Viber */}
+                  <div className="flex flex-col items-center gap-1.5">
+                    <a
+                      href="viber://chat?number=%2B959443412110"
+                      className="w-12 h-12 rounded-xl bg-[#0b0d10]/90 border border-white/10 hover:border-[#7360f2]/50 text-white/70 hover:text-[#7360f2] flex items-center justify-center transition-all backdrop-blur-sm"
+                      aria-label="Viber Contact"
+                    >
+                      <FaViber className="w-5 h-5" />
+                    </a>
+                    <a
+                      href="tel:+959443412110"
+                      className="text-[11px] text-white/50 hover:text-primary transition-colors tracking-tight"
+                    >
+                      +959443412110
+                    </a>
+                  </div>
                 </div>
               </div>
             </FadeIn>

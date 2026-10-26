@@ -1,6 +1,6 @@
 import React from "react";
-import { Mail, MapPin, Globe, GitFork } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
+import { Mail, MapPin } from "lucide-react";
+import { FaGithub, FaViber } from "react-icons/fa";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -8,15 +8,6 @@ const navLinks = [
   { name: "Projects", href: "#projects" },
   { name: "Services", href: "#services" },
   { name: "Contact", href: "#contact" },
-];
-
-const socialLinks = [
-  {
-    icon: GitFork,
-    href: "https://github.com",
-    label: "GitHub",
-    active: true, // Highlights with green border/glow as shown in the screenshot
-  },
 ];
 
 const Footer = () => {
@@ -40,7 +31,7 @@ const Footer = () => {
             <div className="flex flex-col gap-3">
               {/* Email Pill */}
               <a
-                href="mailto:alex@timetoprogram.com"
+                href="mailto:devathlon25@gmail.com"
                 className="flex items-center gap-3.5 px-4 py-3 rounded-2xl bg-[#0b0d10]/90 border border-white/10 hover:border-primary/40 transition-colors w-full max-w-sm"
               >
                 <div className="p-2 rounded-lg bg-primary/10 border border-primary/20 text-primary">
@@ -92,16 +83,37 @@ const Footer = () => {
               Let's connect and create something amazing together.
             </p>
 
-            <div className="flex items-center gap-3">
-              <a
-                href="https://github.com/DEVRO99"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub Profile"
-                className="w-12 h-12 rounded-2xl flex items-center justify-center bg-primary/10 border border-primary/50 text-primary shadow-[0_0_15px_rgba(34,197,94,0.15)] hover:bg-primary/20 hover:scale-105 transition-all"
-              >
-                <FaGithub className="w-5 h-5" />
-              </a>
+            <div className="flex items-start gap-4">
+              {/* GitHub */}
+              <div className="flex flex-col items-center gap-1.5">
+                <a
+                  href="https://github.com/DEVRO99"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub Profile"
+                  className="w-12 h-12 rounded-2xl flex items-center justify-center bg-primary/10 border border-primary/50 text-primary shadow-[0_0_15px_rgba(34,197,94,0.15)] hover:bg-primary/20 hover:scale-105 transition-all"
+                >
+                  <FaGithub className="w-5 h-5" />
+                </a>
+                <span className="text-[11px] text-white/40">GitHub</span>
+              </div>
+
+              {/* Viber */}
+              <div className="flex flex-col items-center gap-1.5">
+                <a
+                  href="viber://chat?number=%2B959443412110"
+                  aria-label="Viber Contact"
+                  className="w-12 h-12 rounded-2xl flex items-center justify-center bg-[#7360f2]/10 border border-[#7360f2]/40 text-[#7360f2] shadow-[0_0_15px_rgba(115,96,242,0.15)] hover:bg-[#7360f2]/20 hover:scale-105 transition-all"
+                >
+                  <FaViber className="w-5 h-5" />
+                </a>
+                <a
+                  href="tel:+959443412110"
+                  className="text-[11px] text-white/50 hover:text-primary transition-colors tracking-tight"
+                >
+                  +959443412110
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -111,7 +123,6 @@ const Footer = () => {
           <p>© 2026 DEVRO. All rights reserved.</p>
           <div className="flex items-center gap-1.5">
             <span>Built with</span>
-
             <span>using React & Tailwind CSS</span>
           </div>
         </div>
@@ -121,4 +132,3 @@ const Footer = () => {
 };
 
 export default Footer;
-675078525
